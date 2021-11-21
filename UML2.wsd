@@ -1,0 +1,18 @@
+@startuml
+class Controller {
+    ~StartSite()
+    +BookList()
+    *getBookList() 
+    -getBook()
+    #bookOne()
+    +error404()
+}
+ 
+class Model {
+    ~getBookList()
+    +getBook()
+}
+ 
+Controller::getBookList --> Model::getBookList
+Model::getbook --> Controller::getBook
+@enduml
